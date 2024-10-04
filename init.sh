@@ -10,7 +10,7 @@ fi
 pip install spotdl &
 pip install --upgrade spotdl &
 spotdl --download-ffmpeg
-cp spotdl.json ~/.spotdl/config.json 
+cp spotdl.json ~/.spotdl/config.json
 
 # python3 -m pip install -U --pre "yt-dlp[default]"
 sudo add-apt-repository ppa:tomtomtom/yt-dlp &
