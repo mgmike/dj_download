@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TODO: Make the config not specific to a file, and instead hardcode the path into the bash or pyhton script
+
+
 if [[ -z "$1" ]]
 then
     echo "Enter a username for spotfy"

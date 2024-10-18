@@ -2,7 +2,7 @@
 
 input="spotify_playlists.txt"
 download_path="/mnt/c/Users/mgmik/Documents/spotdl/"
-final_path="/mnt/e/Music/spotDL/"
+final_path="/mnt/e/Music/deemix/"
 
 while IFS='|' read -r name url; do
 
@@ -11,7 +11,8 @@ while IFS='|' read -r name url; do
     echo -e "Downloading $name, with url $url"
     echo "*******************************"
     
-    spotdl download $url
-    mv -n "$download_path$name/"* "$final_path$name"
+    spotdl --archive "/mnt/c/Users/mgmik/Documents/spotdl/$name/archive.txt" download $url
+    # mv -n "$download_path$name/"* "$final_path$name"
+    python3 copy_new.py "$download_path$name" "$final_path$name"
     
 done < "$input"
